@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", Sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+/* ---------------------------------- Intro --------------------------------- */
+.div-time {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  padding: 5px;
+  color: whitesmoke;
+  background-color: rgb(0, 222, 81);
+  border-radius: 20px;
+  font-size: 20px;
+}
+.div-logo {
+  position: relative;
+  width: 250px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  .logo {
+    display: block;
+    width: 250px;
+    margin: auto 0;
+  }
+}
+.aix-marseille {
+  width: 250px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+/* ----------------------------------- App ---------------------------------- */
+header {
+  background-color: rgb(246, 114, 48);
+  color: whitesmoke;
+  height: 14vh;
+  padding-top: 8vh;
+  text-align: center;
+}
+main {
+  height: 72vh;
+}
+.div-battery {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  height: 20px;
+  .battery {
+    height: 30px;
+  }
+}
+
+footer {
+  background-color: whitesmoke;
+  border-top: solid grey 1px;
+  height: 14vh;
+}
+
+/* ----------------------------------- nav ---------------------------------- */
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 14vh;
+  .nav-div {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    gap: 10px;
+    .nav-icon {
+      display: block;
+      width: 40px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* -------------------------------- nav page -------------------------------- */
+
+/* ---------------------------------- page1 --------------------------------- */
+.mesTitres-div {
+  display: block;
+  height: 72vh;
+  padding: 20px;
+  .mesTitresReels {
+    display: block;
+    height: 72vh;
+  }
+  .pasDeTitres {
+    display: block;
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* --------------------------------- page 2 --------------------------------- */
+.acheter-div {
+  display: block;
+  height: 72vh;
+  padding: 5px 20px;
+  overflow-y: auto;
+  .acheterTicket {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    .acheter-img {
+      flex-basis: 10%;
+      display: block;
+      width: 40px;
+      height: 40px;
+    }
+    .acheterAll {
+      flex-basis: 90%;
+      .acheterFirst {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        .acheterTitle {
+          font-size: 20px;
+          font-weight: 500;
+          align-self: center;
+        }
+        .acheterAdd {
+          font-size: 40px;
+          align-self: center;
+          display: flex;
+          gap: 10px;
+          .buttonCart {
+            border-radius: 1000px;
+            font-size: 30px;
+            padding: 0 5px;
+            border: none;
+            color: whitesmoke;
+            background-color: rgb(246, 114, 48);
+          }
+        }
+      }
+      .acheterSecond {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        .acheterDescription {
+          font-size: 12px;
+          align-self: center;
+        }
+        .acheterPrice {
+          font-size: 20px;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------- page 3 --------------------------------- */
+.menu-div {
+  display: block;
+  height: 72vh;
+  padding: 20px;
+}

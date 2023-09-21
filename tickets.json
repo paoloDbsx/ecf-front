@@ -1,0 +1,64 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "title": "Solo",
+      "description": "Valable 60 minutes réseau RTM",
+      "price": "1,80"
+    },
+    {
+      "id": 2,
+      "title": "Duo",
+      "description": "Valable 60 minutes réseau RTM<br>Validable 2 fois",
+      "price": "3,20"
+    },
+    {
+      "id": 3,
+      "title": "10 voyages",
+      "description": "Valable 60 minutes réseau RTM<br>Multi-validable",
+      "price": "15,80"
+    },
+    {
+      "id": 4,
+      "title": "20 voyages",
+      "description": "Valable 60 minutes réseau RTM<br>Multi-validable",
+      "price": "28,50"
+    },
+    {
+      "id": 5,
+      "title": "LeCar+ L50",
+      "description": "1 voyage sur toutes les lignes<br>Cartreize sauf 40 et 91",
+      "price": "7,00"
+    },
+    {
+      "id": 6,
+      "title": "LeCar+ L50",
+      "description": "10 voyages sur toutes les lignes<br>Cartreize sauf 40 et 91",
+      "price": "56,00"
+    },
+    {
+      "id": 7,
+      "title": "Solo Aix-en-Provence",
+      "description": "Valable 60 minutes sur Aix-en-Provence",
+      "price": "1,50"
+    },
+    {
+      "id": 8,
+      "title": "10 voyages Aix-en-Provence",
+      "description": "Valable 60 minutes sur Aix-en-Provence<br>Multi-validable",
+      "price": "12,00"
+    },
+    {
+      "id": 9,
+      "title": "Solo Berre-L'étang",
+      "description": "Valable 60 minutes sur Berre-L'étang",
+      "price": "1,20"
+    },
+    {
+      "id": 10,
+      "title": "10 voyages Berre-L'étang",
+      "description": "Valable 60 minutes sur Berre-L'étang<br>Multi-validable",
+      "price": "10,00"
+    }
+  ]
+}
