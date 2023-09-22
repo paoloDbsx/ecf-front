@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../images/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="shortcut icon"
       href="../images/favicon.png"
@@ -27,19 +27,32 @@
     <main>
       <!-- ------------------------------- page 1 -------------------------------- -->
       <div id="mesTitresDiv" class="hidden">
-        <div id="MesTitresReels">ger</div>
+        <div id="MesTitresReels" class="mesTitresReels">
+          <div class="mesTitres-img1"></div>
+          <span>Solo</span>
+        </div>
         <div id="pasDeTitres" class="hidden">
-          <span class="pasDeTitres-span">
-            Vous n'avez actuellement<br />aucun titre de transports
-          </span>
+          <span> Vous n'avez actuellement<br />aucun titre de transports </span>
         </div>
       </div>
 
       <!-- ------------------------------- page 2 -------------------------------- -->
-      <div id="acheterDiv" class="hidden"></div>
+      <div id="acheterDiv" class="hidden">
+        <div class="allTickets"></div>
+        <div class="buy">
+          <span>total : </span>
+          <button onclick="validate()">valider</button>
+        </div>
+      </div>
 
       <!-- -------------------------------- page3 -------------------------------- -->
-      <div id="menuDiv" class="hidden">ertert</div>
+      <div id="menuDiv" class="hidden">
+        <img
+          src="../images/antoine-dupont-french.gif"
+          alt=""
+          class="pasDeMenu"
+        />
+      </div>
     </main>
 
     <!-- ------------------------------- footer -------------------------------- -->
@@ -77,5 +90,8 @@
   </body>
   <script src="../scripts/script.js"></script>
   <script src="../scripts/nav.js"></script>
+  <script src="../scripts/ticketsTab.js"></script>
   <script src="../scripts/tickets.js"></script>
+  <script src="../scripts/cart.js"></script>
+  <script src="../scripts/chrono.js"></script>
 </html>
