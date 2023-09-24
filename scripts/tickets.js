@@ -15,7 +15,7 @@ ticketsTab.forEach((ticket) => {
    alt=""
    class="acheter-img"
  />
- <div class="acheterAll" id="test">
+ <div class="acheterAll">
    <div class="acheterFirst">
      <span class="acheterTitle">` +
     ticket.title +

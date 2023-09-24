@@ -25,7 +25,7 @@
   z-index: 10;
   padding: 5px;
   color: whitesmoke;
-  background-color: rgb(0, 222, 81);
+  background-color: #32c759;
   border-radius: 20px;
   font-size: 20px;
 }
@@ -53,7 +53,7 @@
 
 /* ----------------------------------- App ---------------------------------- */
 header {
-  background-color: rgb(246, 114, 48);
+  background: linear-gradient(to right, rgb(247, 122, 60), rgb(226, 95, 29));
   color: whitesmoke;
   height: 14vh;
   padding-top: 8vh;
@@ -105,44 +105,48 @@ nav .nav-div .nav-icon {
   display: block;
   height: 72vh;
   overflow-y: auto;
-  padding: 20px;
 }
 .mesTitres-div .mesTitresReels {
+  height: 72vh;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   text-align: center;
   font-size: 20px;
 }
-.mesTitres-div .mesTitresReels .mesTitres-img1 {
-  background-image: url("../images/ticket.png");
-  background-size: contain;
-  width: 250px;
-  height: 158px;
-  border: none;
-  border-radius: 10px;
-  margin: 0 auto;
-  position: relative;
-}
 .mesTitres-div .mesTitresReels .mesTitres-img {
-  background-image: url("../images/ticket.png");
+  border: 3px solid white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url("../images/ticket.jpg");
   background-size: contain;
+  background-repeat: no-repeat;
   width: 250px;
-  height: 158px;
-  border: none;
+  height: 160px;
   border-radius: 10px;
   margin: 0 auto;
-  position: relative;
 }
-.mesTitres-div .mesTitresReels .mesTitres-img::before {
-  background-color: rgba(0, 0, 0, 0.5);
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  position: absolute;
+.mesTitres-div .mesTitresReels .mesTitres-img .timer {
+  background-color: #32c759;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.3);
+  height: 40%;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.mesTitres-div .mesTitresReels .mesTitres-img .timer .fin {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.mesTitres-div .mesTitresReels .mesTitres-img .timer .finTimer {
+  font-size: 22px;
+  color: whitesmoke;
+  font-weight: 600;
 }
 .mesTitres-div .mesTitresReels .mesTitresSeul {
   display: flex;
@@ -150,6 +154,24 @@ nav .nav-div .nav-icon {
   text-align: center;
   gap: 15px;
   font-size: 20px;
+}
+.mesTitres-div .validerTitre {
+  height: 16vh;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.3);
+}
+.mesTitres-div .validerTitre .valider-button {
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  color: whitesmoke;
+  width: 90%;
+  padding: 15px 0;
 }
 .mesTitres-div .pasDeTitres {
   display: block;
@@ -165,19 +187,23 @@ nav .nav-div .nav-icon {
 .acheter-div {
   display: block;
   height: 72vh;
-  padding: 5px 20px;
+}
+.acheter-div .allTickets::-webkit-scrollbar {
+  display: none;
 }
 .acheter-div .allTickets {
-  height: 56vh;
-  overflow-y: auto;
-}
-.acheter-div .buy {
-  height: 16vh;
+  margin: 0 20px;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 0;
 }
 .acheter-div .acheterTicket {
   display: flex;
   gap: 10px;
-  margin: 15px;
 }
 .acheter-div .acheterTicket .acheter-img {
   flex-basis: 10%;
@@ -200,18 +226,26 @@ nav .nav-div .nav-icon {
   align-self: center;
 }
 .acheter-div .acheterTicket .acheterAll .acheterFirst .acheterAdd {
-  font-size: 40px;
+  font-size: 35px;
   align-self: center;
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 .acheter-div .acheterTicket .acheterAll .acheterFirst .acheterAdd .buttonCart {
+  font-size: 25px;
   border-radius: 1000px;
-  font-size: 30px;
-  padding: 0 5px;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(246, 114, 48);
   border: none;
   color: whitesmoke;
   background-color: rgb(246, 114, 48);
+}
+.acheter-div .acheterTicket .acheterAll .acheterFirst .acheterAdd .buttonCart:hover {
+  color: rgb(246, 114, 48);
+  background-color: whitesmoke;
+  border: 1px solid rgb(246, 114, 48);
 }
 .acheter-div .acheterTicket .acheterAll .acheterSecond {
   display: flex;
@@ -225,6 +259,30 @@ nav .nav-div .nav-icon {
 .acheter-div .acheterTicket .acheterAll .acheterSecond .acheterPrice {
   font-size: 20px;
   align-self: center;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.3);
+  height: 16vh;
+  justify-content: space-evenly;
+}
+.buy .buySpan {
+  place-self: end;
+  margin: 0 auto;
+}
+.buy button {
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  color: whitesmoke;
+  width: 90%;
+  padding: 15px 0;
 }
 
 /* --------------------------------- page 3 --------------------------------- */

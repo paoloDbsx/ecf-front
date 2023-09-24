@@ -28,8 +28,18 @@
       <!-- ------------------------------- page 1 -------------------------------- -->
       <div id="mesTitresDiv" class="hidden">
         <div id="MesTitresReels" class="mesTitresReels">
-          <div class="mesTitres-img1"></div>
+          <div class="mesTitres-img">
+            <div class="hidden" id="timer">
+              <span class="fin">Fin de validité :</span>
+              <span class="finTimer"></span>
+            </div>
+          </div>
           <span>Solo</span>
+        </div>
+        <div class="hidden" id="validerTitre">
+          <button onclick="timer()" class="valider-button" id="validerButton">
+            Valider
+          </button>
         </div>
         <div id="pasDeTitres" class="hidden">
           <span> Vous n'avez actuellement<br />aucun titre de transports </span>
@@ -39,9 +49,9 @@
       <!-- ------------------------------- page 2 -------------------------------- -->
       <div id="acheterDiv" class="hidden">
         <div class="allTickets"></div>
-        <div class="buy">
-          <span>total : </span>
-          <button onclick="validate()">valider</button>
+        <div class="hidden" id="buy">
+          <span class="buySpan"></span>
+          <button onclick="validate()">Acheter</button>
         </div>
       </div>
 
