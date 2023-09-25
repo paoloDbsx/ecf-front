@@ -28,13 +28,16 @@
       <!-- ------------------------------- page 1 -------------------------------- -->
       <div id="mesTitresDiv" class="hidden">
         <div id="MesTitresReels" class="mesTitresReels">
-          <div class="mesTitres-img">
-            <div class="hidden" id="timer">
-              <span class="fin">Fin de validité :</span>
-              <span class="finTimer"></span>
+          <div class="mesTitresSeul">
+            <div class="mesTitres-img">
+              <div class="hidden" id="timer">
+                <span class="fin">Fin de validité :</span>
+                <span class="finTimer">00:60:00</span>
+              </div>
             </div>
+            <span>Solo</span>
           </div>
-          <span>Solo</span>
+          <hr />
         </div>
         <div class="hidden" id="validerTitre">
           <button onclick="timer()" class="valider-button" id="validerButton">
@@ -63,10 +66,35 @@
           class="pasDeMenu"
         />
       </div>
+
+      <!-- ------------------------------- page paiement -------------------------------- -->
+      <div id="paiementDiv" class="hidden">
+        <div class="paiementTotal">
+          <span>Total de la commande : </span><span id="paiementTotal"></span>
+        </div>
+        <hr />
+        <div class="paiementCart"></div>
+        <div class="paiementConditions">
+          <input type="checkbox" name="conditions" id="conditions" /><label
+            for="conditions"
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J'ai lu et j'accepte les
+            <u>conditions générales de vente</u></label
+          >
+        </div>
+        <div class="attention-div">
+          <img class="attention-img" src="../images/warning.png" alt="" />
+          <p class="attention-p">
+            Attention vos correspondances ainsi que vos titres ne vous
+            permettent pas d'utiliser le métro pour le moment
+          </p>
+        </div>
+        <button class="payer-button" id="payerButton">Payer</button>
+      </div>
     </main>
 
     <!-- ------------------------------- footer -------------------------------- -->
-    <footer>
+    <footer id="footer">
       <nav>
         <div class="nav-div" id="mesTitres">
           <img

@@ -2,6 +2,7 @@ let mesTitresImg = document.querySelector(".mesTitres-img");
 let validerTitre = document.querySelector("#validerTitre");
 let Timer = document.querySelector("#timer");
 let finTimer = document.querySelector(".finTimer");
+let mesTitresSeul = document.querySelector(".mesTitresSeul");
 
 function timer() {
   mesTitresImg.style.backgroundImage = "url('../images/ticket.jpg')";
@@ -49,9 +50,10 @@ function timer() {
     finTimer.innerText =
       realTimerHours + ":" + realTimerMinutes + ":" + realTimerSeconds;
     if (finTimer.innerText === "00:00:00") {
+      // mesTitresSeul.classList.add("hidden");
       clearInterval(setIntervalId);
     }
-  }, 10);
+  }, 1000);
 }
 
 mesTitresImg.addEventListener("click", () => {

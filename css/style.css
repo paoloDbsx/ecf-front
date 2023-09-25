@@ -47,8 +47,7 @@
   width: 250px;
   position: absolute;
   bottom: 10px;
-  left: 0;
-  right: 0;
+  margin: 0 auto;
 }
 
 /* ----------------------------------- App ---------------------------------- */
@@ -107,15 +106,20 @@ nav .nav-div .nav-icon {
   overflow-y: auto;
 }
 .mesTitres-div .mesTitresReels {
-  height: 72vh;
-  padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
   text-align: center;
   font-size: 20px;
 }
-.mesTitres-div .mesTitresReels .mesTitres-img {
+.mesTitres-div .mesTitresReels .mesTitresSeul {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+  font-size: 20px;
+}
+.mesTitres-div .mesTitresReels .mesTitresSeul .mesTitres-img {
   border: 3px solid white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -129,31 +133,24 @@ nav .nav-div .nav-icon {
   border-radius: 10px;
   margin: 0 auto;
 }
-.mesTitres-div .mesTitresReels .mesTitres-img .timer {
+.mesTitres-div .mesTitresReels .mesTitresSeul .mesTitres-img .timer {
   background-color: #32c759;
   box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.3);
   height: 40%;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 5px 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
 }
-.mesTitres-div .mesTitresReels .mesTitres-img .timer .fin {
+.mesTitres-div .mesTitresReels .mesTitresSeul .mesTitres-img .timer .fin {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.8);
 }
-.mesTitres-div .mesTitresReels .mesTitres-img .timer .finTimer {
+.mesTitres-div .mesTitresReels .mesTitresSeul .mesTitres-img .timer .finTimer {
   font-size: 22px;
   color: whitesmoke;
   font-weight: 600;
-}
-.mesTitres-div .mesTitresReels .mesTitresSeul {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 15px;
-  font-size: 20px;
 }
 .mesTitres-div .validerTitre {
   height: 16vh;
@@ -296,6 +293,63 @@ nav .nav-div .nav-icon {
 }
 .menu-div .pasDeMenu {
   width: 80vw;
+}
+
+/* ------------------------------ page paiement ----------------------------- */
+.paiement-div {
+  display: block;
+  height: 86vh;
+  padding: 20px;
+  position: relative;
+}
+.paiement-div .paiementTotal {
+  margin: 40px 0 20px;
+  font-size: 19px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+.paiement-div .paiementCart {
+  margin: 20px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.paiement-div .paiementCart .newPaiementCart {
+  display: flex;
+  justify-content: space-between;
+}
+.paiement-div .paiementConditions {
+  margin: 0 0 100px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.paiement-div .attention-div {
+  display: flex;
+  gap: 10px;
+}
+.paiement-div .attention-div .attention-img {
+  width: 30px;
+  height: 30px;
+}
+.paiement-div .attention-div .attention-p {
+  color: #ff2147;
+  font-size: 14px;
+  font-weight: 600;
+}
+.paiement-div .payer-button {
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  border: none;
+  color: whitesmoke;
+  width: 90%;
+  padding: 15px 0;
+  position: absolute;
+  bottom: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

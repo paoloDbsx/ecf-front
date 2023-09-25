@@ -1,5 +1,6 @@
 // Navigation
 let h2 = document.querySelector("#title");
+let footer = document.querySelector("#footer");
 
 // Navigation-items
 let mesTitres = document.querySelector("#mesTitres");
@@ -26,6 +27,9 @@ let acheterDiv = document.querySelector("#acheterDiv");
 
 // Page 3
 let menuDiv = document.querySelector("#menuDiv");
+
+// Page paiement
+let paiementDiv = document.querySelector("#paiementDiv");
 
 // AddEventListener('click')
 mesTitres.addEventListener("click", () => {
