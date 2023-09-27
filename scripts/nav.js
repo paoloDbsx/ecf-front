@@ -1,6 +1,8 @@
 // Navigation
 let h2 = document.querySelector("#title");
 let footer = document.querySelector("#footer");
+let nav = document.querySelector("#nav");
+let bacnaireFooter = document.querySelector("#bancaireFooter");
 
 // Navigation-items
 let mesTitres = document.querySelector("#mesTitres");
@@ -30,6 +32,9 @@ let menuDiv = document.querySelector("#menuDiv");
 
 // Page paiement
 let paiementDiv = document.querySelector("#paiementDiv");
+
+// Page paiement bancaire
+let bancaireDiv = document.querySelector("#bancaireDiv");
 
 // AddEventListener('click')
 mesTitres.addEventListener("click", () => {

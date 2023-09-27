@@ -91,11 +91,47 @@
         </div>
         <button class="payer-button" id="payerButton">Payer</button>
       </div>
+
+      <!-- ----------------------- page paiement bancaire ------------------------ -->
+      <div id="bancaireDiv" class="hidden">
+        <span class="montant"> </span>
+        <form>
+          <label for="numero">Numéro de la carte</label>
+          <div>
+            <div>
+              <input type="text" name="numero" id="numero" />
+              <div></div>
+            </div>
+            <img src="" alt="" />
+          </div>
+          <label for="expire">Expire fin</label>
+          <div>
+            <input type="text" name="expire" id="expire" />
+            <input type="text" name="expireYear" id="expireYear" />
+          </div>
+          <label for="cypto"></label>
+          <div>
+            <input type="text" name="crypto" id="crypto" />
+            <img src="" alt="" />
+          </div>
+        </form>
+        <button onclick="pay()">Valider</button>
+        <div class="imgs1">
+          <img class="visa" src="../images/bancaire/visa.webp" alt="" />
+          <img class="gb" src="../images/bancaire/gb.png" alt="" />
+          <img
+            class="mastercard"
+            src="../images/bancaire/mastercard.png"
+            alt=""
+          />
+        </div>
+        <p>Annuler et retourner à la boutique</p>
+      </div>
     </main>
 
     <!-- ------------------------------- footer -------------------------------- -->
     <footer id="footer">
-      <nav>
+      <nav id="nav">
         <div class="nav-div" id="mesTitres">
           <img
             class="nav-icon"
@@ -124,6 +160,15 @@
           <span class="nav-span">Menu</span>
         </div>
       </nav>
+      <div class="hidden" id="bancaireFooter">
+        <div class="imgs2">
+          <img class="payzen" src="../images/bancaire/payzen.png" alt="" />
+          <img class="cpi" src="../images/bancaire/pci.png" alt="" />
+        </div>
+        <div class="copyright">
+          <span>Copyright Lyra © 2023</span><span><u>Mentions légales</u></span>
+        </div>
+      </div>
     </footer>
   </body>
   <script src="../scripts/script.js"></script>

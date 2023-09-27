@@ -10,8 +10,8 @@ function sanitizeCounters(counter) {
   }
 }
 
+// mise à jour du total pour les bouttons
 function totalUpdate() {
-  // récupération des données
   let numbers = [];
   let counters = document.querySelectorAll(".counter");
   counters.forEach((counter) => {
@@ -55,6 +55,7 @@ function totalUpdate() {
   }
 }
 
+// boutons
 function addCart(id) {
   let counter = document.querySelector("#counter" + id);
   counter.innerText++;
@@ -68,9 +69,11 @@ function deleteCart(id) {
     totalUpdate();
   }
 }
+
+// valider le panier
 let paiementCart = document.querySelector(".paiementCart");
+
 function validate() {
-  // récupération des données
   let numbers = [];
   let counters = document.querySelectorAll(".counter");
   counters.forEach((counter) => {
@@ -128,6 +131,64 @@ function validate() {
   paiementTotal.innerText = total + " €";
 }
 
+// valider le paiement
+function validatePaiement() {
+  let numbers = [];
+  let counters = document.querySelectorAll(".counter");
+  counters.forEach((counter) => {
+    sanitizeCounters(counter);
+    numbers.push(counter.innerText);
+  });
+  let realNumbers = [];
+  let i = 0;
+  numbers.forEach((number) => {
+    if (number > 0) {
+      realNumbers.push([number, i]);
+    }
+    i++;
+  });
+
+  let total = 0;
+
+  realNumbers.forEach((realNumber) => {
+    ticketsTab.forEach((ticket) => {
+      if (ticket.id === realNumber[1] + 1) {
+        total += realNumber[0] * ticket.price;
+      }
+    });
+  });
+
+  total = total.toString();
+  total = total.slice(0, -2) + "," + total.slice(-2);
+  if (total === ",0") {
+    total = "0";
+  }
+
+  let montant = document.querySelector(".montant");
+  montant.innerText = "Montant : " + total + " EUR";
+
+  paiementDiv.classList.remove("paiement-div");
+  bancaireDiv.classList.add("bancaireDiv");
+  footer.classList.remove("hidden");
+  footer.style.height = "24vh";
+  nav.classList.add("hidden");
+  bacnaireFooter.classList.add("bancaireFooter");
+}
+
+let conditions = document.querySelector("#conditions");
+let payerButton = document.querySelector("#payerButton");
+
+conditions.addEventListener("change", () => {
+  if (conditions.checked) {
+    payerButton.onclick = validatePaiement;
+    payerButton.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+  } else {
+    payerButton.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+    payerButton.onclick = null;
+  }
+});
+
+// payer
 function pay() {
   let numbers = [];
   let counters = document.querySelectorAll(".counter");
@@ -168,22 +229,17 @@ function pay() {
       }
     });
   });
-  buy.classList.remove("buy");
+
   allTickets.style.height = "72vh";
+  bancaireDiv.classList.remove("bancaireDiv");
   initializeCounters(counters);
   paiementCart.innerHTML = "";
   h2.innerText = "Mes Titres";
-  footer.classList.remove("hidden");
-  paiementDiv.classList.remove("paiement-div");
+  footer.style.height = "14vh";
   mesTitresDiv.classList.add("mesTitres-div");
+  nav.classList.remove("hidden");
+  bacnaireFooter.classList.remove("bancaireFooter");
+  buy.classList.remove("buy");
+  mesTitresIcon.src = "../images/nav/black-tickets.png";
+  acheterIcon.src = "../images/nav/cart.png";
 }
-
-let conditions = document.querySelector("#conditions");
-let payerButton = document.querySelector("#payerButton");
-
-if (conditions.checked) {
-  payerButton.onclick = pay;
-} else {
-  payerButton.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-}
-console.log(conditions.checked);

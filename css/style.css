@@ -59,10 +59,6 @@ header {
   text-align: center;
 }
 
-main {
-  height: 72vh;
-}
-
 .div-battery {
   position: absolute;
   top: 10px;
@@ -340,7 +336,7 @@ nav .nav-div .nav-icon {
 .paiement-div .payer-button {
   margin: 0 auto;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   font-size: 17px;
   font-weight: 500;
@@ -350,6 +346,42 @@ nav .nav-div .nav-icon {
   padding: 15px 0;
   position: absolute;
   bottom: 40px;
+}
+
+/* ------------------------- page paiement bancaire ------------------------- */
+.bancaireDiv {
+  display: block;
+  height: 62vh;
+}
+
+.bancaireFooter {
+  display: block;
+}
+
+.imgs1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.imgs1 .visa {
+  width: 50px;
+}
+.imgs1 .gb {
+  width: 100px;
+}
+.imgs1 .mastercard {
+  width: 50px;
+}
+
+.imgs2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.imgs2 .payzen {
+  width: 150px;
+}
+.imgs2 .cpi {
+  width: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */
