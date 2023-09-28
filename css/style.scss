@@ -53,6 +53,30 @@ header {
   height: 14vh;
   padding-top: 8vh;
   text-align: center;
+  position: relative;
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .back {
+    display: block;
+    position: absolute;
+    top: 8vh;
+    left: 5px;
+    img {
+      width: 20px;
+    }
+    span {
+      font-size: 24px;
+    }
+  }
+  .arrowBlack {
+    display: block;
+    position: absolute;
+    top: 8vh;
+    left: 5px;
+    width: 20px;
+  }
 }
 .div-battery {
   position: absolute;
@@ -347,11 +371,82 @@ nav {
 
 /* ------------------------- page paiement bancaire ------------------------- */
 .bancaireDiv {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   height: 62vh;
+  padding: 60px 0 0;
+  .montant {
+    color: rgb(0, 0, 0, 0.6);
+    font-weight: 600;
+    font-size: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .numero-div {
+      display: flex;
+      gap: 10px;
+      .numero {
+        width: 300px;
+        height: 35px;
+      }
+      img {
+        width: 35px;
+      }
+    }
+    .expire {
+      display: flex;
+      gap: 20px;
+      input {
+        height: 35px;
+      }
+    }
+    .crypto {
+      display: flex;
+      gap: 10px;
+      input {
+        height: 35px;
+      }
+      img {
+        width: 35px;
+      }
+    }
+    label {
+      color: rgb(0, 0, 0, 0.6);
+      font-weight: 600;
+      font-size: 18px;
+      span{
+        color: red;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+  button {
+    text-align: center;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    color: whitesmoke;
+    width: 30%;
+    padding: 15px 0;
+    background-color: blue;
+  }
+  p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 .bancaireFooter {
-  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 // images abncaires
@@ -371,11 +466,19 @@ nav {
 }
 .imgs2 {
   display: flex;
-  justify-content: space-evenly;
+  gap: 20px;
   .payzen {
     width: 150px;
   }
   .cpi {
     width: 150px;
+  }
+}
+.copyright {
+  display: flex;
+  gap: 30px;
+  span {
+    color: rgba(0, 0, 0, 0.614);
+    font-size: 13px;
   }
 }

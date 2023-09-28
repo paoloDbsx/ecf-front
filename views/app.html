@@ -21,24 +21,18 @@
         <img src="../images/battery.png" alt="" class="battery" />
       </div>
       <h2 id="title"></h2>
+      <div class="hidden" id="back">
+        <img src="../images/white-arrow.png" alt="" />
+        <span>Acheter</span>
+      </div>
+      <img id="arrow" class="hidden" src="../images/black-arrow.png" alt="" />
     </header>
 
     <!-- -------------------------------- main --------------------------------- -->
     <main>
       <!-- ------------------------------- page 1 -------------------------------- -->
       <div id="mesTitresDiv" class="hidden">
-        <div id="MesTitresReels" class="mesTitresReels">
-          <div class="mesTitresSeul">
-            <div class="mesTitres-img">
-              <div class="hidden" id="timer">
-                <span class="fin">Fin de validité :</span>
-                <span class="finTimer">00:60:00</span>
-              </div>
-            </div>
-            <span>Solo</span>
-          </div>
-          <hr />
-        </div>
+        <div id="MesTitresReels" class="mesTitresReels"></div>
         <div class="hidden" id="validerTitre">
           <button onclick="timer()" class="valider-button" id="validerButton">
             Valider
@@ -96,23 +90,25 @@
       <div id="bancaireDiv" class="hidden">
         <span class="montant"> </span>
         <form>
-          <label for="numero">Numéro de la carte</label>
-          <div>
-            <div>
-              <input type="text" name="numero" id="numero" />
-              <div></div>
-            </div>
-            <img src="" alt="" />
+          <label for="numero">Numéro de la carte : <span id="numeroSpan"></span></label>
+          <div class="numero-div">
+            <input type="text" name="numero" id="numero" class="numero"/>
+            <img src="../images/interrogation-mark.png" alt="" />
           </div>
-          <label for="expire">Expire fin</label>
-          <div>
-            <input type="text" name="expire" id="expire" />
-            <input type="text" name="expireYear" id="expireYear" />
+          <label for="expire">Expire fin : <span id="expireSpan"></span></label>
+          <div class="expire">
+            <input type="text" placeholder="mois" name="expire" id="expire" />
+            <input
+              type="number"
+              placeholder="année"
+              name="expireYear"
+              id="expireYear"
+            />
           </div>
-          <label for="cypto"></label>
-          <div>
+          <label for="cypto">Cryptogramme visuel : <span id="cryptoSpan"></span></label>
+          <div class="crypto">
             <input type="text" name="crypto" id="crypto" />
-            <img src="" alt="" />
+            <img src="../images/interrogation-mark.png" alt="" />
           </div>
         </form>
         <button onclick="pay()">Valider</button>
@@ -125,7 +121,9 @@
             alt=""
           />
         </div>
-        <p>Annuler et retourner à la boutique</p>
+        <p id="annuler" onclick="goBack()">
+          Annuler et retourner à la boutique
+        </p>
       </div>
     </main>
 

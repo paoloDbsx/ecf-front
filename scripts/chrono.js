@@ -1,10 +1,15 @@
-let mesTitresImg = document.querySelector(".mesTitres-img");
-let validerTitre = document.querySelector("#validerTitre");
-let Timer = document.querySelector("#timer");
-let finTimer = document.querySelector(".finTimer");
+// let mesTitresImg = document.querySelector(".mesTitres-img");
+// let validerTitre = document.querySelector("#validerTitre");
+// let Timer = document.querySelector("#timer");
+// let finTimer = document.querySelector(".finTimer");
 let mesTitresSeul = document.querySelector(".mesTitresSeul");
 
 function timer() {
+  let mesTitresImg = document.querySelector(".mesTitres-img");
+  let validerTitre = document.querySelector("#validerTitre");
+  let Timer = document.querySelector("#timer");
+  let finTimer = document.querySelector(".finTimer");
+
   mesTitresImg.style.backgroundImage = "url('../images/ticket.jpg')";
   validerTitre.classList.remove("validerTitre");
   MesTitresReels.style.height = "72vh";
@@ -56,8 +61,11 @@ function timer() {
   }, 1000);
 }
 
-mesTitresImg.addEventListener("click", () => {
+function selectTicket() {
+  let mesTitresImg = document.querySelector(".mesTitres-img");
+  let validerTitre = document.querySelector("#validerTitre");
+
   mesTitresImg.style.backgroundImage = "url('../images/ticket-hover.png')";
   validerTitre.classList.add("validerTitre");
   MesTitresReels.style.height = "56vh";
-});
+}
