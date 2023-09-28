@@ -125,11 +125,15 @@ nav .nav-div .nav-icon {
   height: 72vh;
   overflow-y: auto;
 }
+.mesTitres-div .mesTitresReels::-webkit-scrollbar {
+  display: none;
+}
 .mesTitres-div .mesTitresReels {
   display: flex;
   flex-direction: column;
   text-align: center;
   font-size: 20px;
+  overflow-y: scroll;
 }
 .mesTitres-div .mesTitresReels .mesTitresSeul {
   margin: 20px;
@@ -171,6 +175,10 @@ nav .nav-div .nav-icon {
   font-size: 22px;
   color: whitesmoke;
   font-weight: 600;
+}
+.mesTitres-div .mesTitresReels .mesTitresSeul .date {
+  font-size: 14px;
+  font-style: italic;
 }
 .mesTitres-div .validerTitre {
   height: 16vh;

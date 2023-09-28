@@ -2,15 +2,21 @@
 // let validerTitre = document.querySelector("#validerTitre");
 // let Timer = document.querySelector("#timer");
 // let finTimer = document.querySelector(".finTimer");
-let mesTitresSeul = document.querySelector(".mesTitresSeul");
 
 function timer() {
+  let mesTitresSeul = document.querySelectorAll(".mesTitresSeul");
   let mesTitresImg = document.querySelector(".mesTitres-img");
   let validerTitre = document.querySelector("#validerTitre");
   let Timer = document.querySelector("#timer");
   let finTimer = document.querySelector(".finTimer");
+  let startDate = document.querySelector(".date");
 
+  startDate.innerText =
+    "(validé le " + dayName + " " + day + " " + month + " à " + time + ")";
+
+  spanTime.innerText = "";
   mesTitresImg.style.backgroundImage = "url('../images/ticket.jpg')";
+  mesTitresImg.onclick = null;
   validerTitre.classList.remove("validerTitre");
   MesTitresReels.style.height = "72vh";
   Timer.classList.add("timer");
@@ -55,10 +61,14 @@ function timer() {
     finTimer.innerText =
       realTimerHours + ":" + realTimerMinutes + ":" + realTimerSeconds;
     if (finTimer.innerText === "00:00:00") {
-      // mesTitresSeul.classList.add("hidden");
+      mesTitresSeul[0].remove();
+      mesTitresImg.onclick = selectTicket;
+      if (MesTitresReels.innerText === "") {
+        pasDeTitres.classList.add("pasDeTitres");
+      }
       clearInterval(setIntervalId);
     }
-  }, 1000);
+  }, 1);
 }
 
 function selectTicket() {

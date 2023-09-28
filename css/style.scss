@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Source Sans Pro", Sans-serif;
 }
-
 .hidden {
   display: none;
 }
@@ -88,7 +87,6 @@ header {
     height: 30px;
   }
 }
-
 footer {
   background-color: whitesmoke;
   border-top: solid grey 1px;
@@ -120,11 +118,17 @@ nav {
   display: block;
   height: 72vh;
   overflow-y: auto;
+  // masquer le scroll sur chrome et edge
+  .mesTitresReels::-webkit-scrollbar {
+    display: none;
+  }
   .mesTitresReels {
     display: flex;
     flex-direction: column;
     text-align: center;
     font-size: 20px;
+    overflow-y: scroll;
+    // masquer le scroll sur firefox
     .mesTitresSeul {
       margin: 20px;
       display: flex;
@@ -164,6 +168,10 @@ nav {
             font-weight: 600;
           }
         }
+      }
+      .date {
+        font-size: 14px;
+        font-style: italic;
       }
     }
   }
@@ -418,7 +426,7 @@ nav {
       color: rgb(0, 0, 0, 0.6);
       font-weight: 600;
       font-size: 18px;
-      span{
+      span {
         color: red;
         font-size: 12px;
         font-weight: 500;

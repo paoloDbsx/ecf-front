@@ -322,21 +322,22 @@ function pay() {
           for (let k = 0; k < realNumber[0]; k++) {
             let newTitre = document.createElement("div");
             newTitre.classList.add("mesTitresSeul");
-            let hr = document.createElement("hr");
             newTitre.innerHTML =
               `
-              <div class="mesTitres-img" onclick="selectTicket()">
+              <div class="mesTitres-img" onclick="selectTicket()" id="titre">
               <div class="hidden" id="timer">
                 <span class="fin">Fin de validité :</span>
                 <span class="finTimer">00:60:00</span>
               </div>
             </div>
+            <div>
       <span>` +
               ticket.title +
               `</span>
+              <span class="date"></span>
+              </div>
       `;
             MesTitresReels.appendChild(newTitre);
-            MesTitresReels.appendChild(hr);
           }
         }
       });
@@ -355,5 +356,9 @@ function pay() {
     mesTitresIcon.src = "../images/nav/black-tickets.png";
     acheterIcon.src = "../images/nav/cart.png";
     arrowBlack.classList.remove("arrowBlack");
+    numero.value = "";
+    expire.value = "";
+    expireYear.value = "";
+    crypto.value = "";
   }
 }
