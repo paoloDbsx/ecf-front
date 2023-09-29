@@ -17,7 +17,7 @@ function timer() {
   Timer.classList.add("timer");
 
   // tu peux modifier cette variable pour faire un test plus rapide
-  let t = 1;
+  let t = 1000;
 
   // timer
   let timerHours = 0;
