@@ -7,8 +7,6 @@ let day = date.getDate();
 let dayName = date.getDay();
 let month = date.getMonth();
 
-console.log(month);
-
 if (minutes < 10) {
   minutes = "0" + minutes;
 }

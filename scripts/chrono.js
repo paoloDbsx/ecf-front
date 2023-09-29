@@ -10,7 +10,6 @@ function timer() {
   startDate.innerText =
     "(validé le " + dayName + " " + day + " " + month + " à " + time + ")";
 
-  spanTime.innerText = "";
   mesTitresImg.style.backgroundImage = "url('../images/ticket.jpg')";
   mesTitresImg.onclick = null;
   validerTitre.classList.remove("validerTitre");
@@ -18,7 +17,7 @@ function timer() {
   Timer.classList.add("timer");
 
   // tu peux modifier cette variable pour faire un test plus rapide
-  let t = 1000;
+  let t = 1;
 
   // timer
   let timerHours = 0;
