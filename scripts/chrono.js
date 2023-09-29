@@ -17,6 +17,9 @@ function timer() {
   MesTitresReels.style.height = "72vh";
   Timer.classList.add("timer");
 
+  // tu peux modifier cette variable pour faire un test plus rapide
+  let t = 1000;
+
   // timer
   let timerHours = 0;
   let timerMinutes = 60;
@@ -65,7 +68,7 @@ function timer() {
       }
       clearInterval(setIntervalId);
     }
-  }, 1);
+  }, t);
 }
 
 // sélectionne un ticket
