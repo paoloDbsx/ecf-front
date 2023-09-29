@@ -1,4 +1,4 @@
-// Time
+// Date et temps
 let date = new Date();
 
 let hours = date.getHours();

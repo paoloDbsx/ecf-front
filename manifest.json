@@ -1,0 +1,12 @@
+{
+  "name": "leTicket",
+  "icons": [
+    {
+      "src": "../images/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen"
+}

@@ -1,9 +1,13 @@
-// fonctions pour la validation
+// fonctions pour la validation :
+
+// initialise tous les counters à 0
 function initializeCounters(counters) {
   counters.forEach((counter) => {
     counter.innerText = 0;
   });
 }
+
+// filtre les counters
 function sanitizeCounters(counter) {
   if (counter.innerText < 0 || !Number.isInteger(parseInt(counter.innerText))) {
     counter.innerText = 0;
@@ -12,12 +16,15 @@ function sanitizeCounters(counter) {
 
 // mise à jour du total pour les bouttons
 function totalUpdate() {
+  // on récupère dans un premier tableau tous le contenu de chaque counter et on leur associe l'id du ticket
   let numbers = [];
   let counters = document.querySelectorAll(".counter");
   counters.forEach((counter) => {
     sanitizeCounters(counter);
     numbers.push(counter.innerText);
   });
+
+  // on récupère dans un deuxième tableau tous les counters qui nous intéressent (on enlève ceux qui sont à 0)
   let realNumbers = [];
   let i = 0;
   numbers.forEach((number) => {
@@ -27,8 +34,10 @@ function totalUpdate() {
     i++;
   });
 
+  // on incrémente le total du panier :
   let total = 0;
 
+  // on fait un foreach dans un foreach pour aller récupérer les prix des tickets
   realNumbers.forEach((realNumber) => {
     ticketsTab.forEach((ticket) => {
       if (ticket.id === realNumber[1] + 1) {
@@ -55,13 +64,16 @@ function totalUpdate() {
   }
 }
 
-// boutons
+// boutons :
+
+// boutons ajouter
 function addCart(id) {
   let counter = document.querySelector("#counter" + id);
   counter.innerText++;
   totalUpdate();
 }
 
+// boutons supprimer
 function deleteCart(id) {
   let counter = document.querySelector("#counter" + id);
   if (counter.innerText !== "0") {
@@ -90,8 +102,7 @@ function validate() {
     i++;
   });
 
-  let total = 0;
-
+  // on valide le paiement
   realNumbers.forEach((realNumber) => {
     ticketsTab.forEach((ticket) => {
       if (ticket.id === realNumber[1] + 1) {
@@ -133,6 +144,7 @@ function validate() {
   paiementTotal.innerText = total + " €";
 }
 
+// bouton retour
 back.addEventListener("click", () => {
   h2.innerText = "Acheter";
   footer.classList.remove("hidden");
@@ -145,7 +157,7 @@ back.addEventListener("click", () => {
 let arrowBlack = document.querySelector("#arrow");
 let annuler = document.querySelector("#annuler");
 
-// valider le paiement
+// on valide le paiement avec confitions
 function validatePaiement() {
   let numbers = [];
   let counters = document.querySelectorAll(".counter");
@@ -191,6 +203,7 @@ function validatePaiement() {
   arrowBlack.classList.add("arrowBlack");
 }
 
+// confitions
 let conditions = document.querySelector("#conditions");
 let payerButton = document.querySelector("#payerButton");
 
@@ -204,6 +217,7 @@ conditions.addEventListener("change", () => {
   }
 });
 
+// deuxième bouton retour
 arrowBlack.addEventListener("click", () => {
   paiementDiv.classList.add("paiement-div");
   bancaireDiv.classList.remove("bancaireDiv");
@@ -215,6 +229,7 @@ arrowBlack.addEventListener("click", () => {
   arrowBlack.classList.remove("arrowBlack");
 });
 
+// troisième bouton retour pour annuler toute l'opération
 function goBack() {
   let counters = document.querySelectorAll(".counter");
   bancaireDiv.classList.remove("bancaireDiv");
@@ -229,6 +244,7 @@ function goBack() {
   initializeCounters(counters);
 }
 
+// Regex
 let numero = document.querySelector("#numero");
 let expire = document.querySelector("#expire");
 let expireYear = document.querySelector("#expireYear");
@@ -294,7 +310,7 @@ crypto.addEventListener("blur", () => {
   }
 });
 
-// payer
+// on valide la dernière étape du paiement et on paye
 function pay() {
   let numbers = [];
   let counters = document.querySelectorAll(".counter");

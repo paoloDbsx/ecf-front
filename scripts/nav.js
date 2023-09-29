@@ -36,7 +36,7 @@ let paiementDiv = document.querySelector("#paiementDiv");
 // Page paiement bancaire
 let bancaireDiv = document.querySelector("#bancaireDiv");
 
-// AddEventListener('click')
+// AddEventListener('click') de la nav
 mesTitres.addEventListener("click", () => {
   mesTitresIcon.src = "../images/nav/black-tickets.png";
   acheterIcon.src = "../images/nav/cart.png";

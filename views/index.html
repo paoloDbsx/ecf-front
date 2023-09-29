@@ -9,18 +9,21 @@
       href="../images/favicon.png"
       type="image/x-icon"
     />
+    <link rel="manifest" href="../manifest.json" />
     <title>leticket</title>
+    <script>
+      window.addEventListener("load", () => {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("../sw.js");
+        }
+      });
+    </script>
   </head>
   <body onLoad="setTimeout('introRedirection()', 1500)">
-    <div class="div-time">
-      <span id="time"></span>
-    </div>
     <header class="hidden"></header>
     <main>
       <div class="div-logo">
         <img src="../images/logo.png" alt="" class="logo" />
-      </div>
-      <div>
         <img src="../images/aix-marseille.png" alt="" class="aix-marseille" />
       </div>
     </main>

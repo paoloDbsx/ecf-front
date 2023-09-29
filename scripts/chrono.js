@@ -1,8 +1,4 @@
-// let mesTitresImg = document.querySelector(".mesTitres-img");
-// let validerTitre = document.querySelector("#validerTitre");
-// let Timer = document.querySelector("#timer");
-// let finTimer = document.querySelector(".finTimer");
-
+// lance le timer
 function timer() {
   let mesTitresSeul = document.querySelectorAll(".mesTitresSeul");
   let mesTitresImg = document.querySelector(".mesTitres-img");
@@ -20,6 +16,7 @@ function timer() {
   validerTitre.classList.remove("validerTitre");
   MesTitresReels.style.height = "72vh";
   Timer.classList.add("timer");
+
   // timer
   let timerHours = 0;
   let timerMinutes = 60;
@@ -71,6 +68,7 @@ function timer() {
   }, 1);
 }
 
+// sélectionne un ticket
 function selectTicket() {
   let mesTitresImg = document.querySelector(".mesTitres-img");
   let validerTitre = document.querySelector("#validerTitre");

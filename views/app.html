@@ -9,17 +9,19 @@
       href="../images/favicon.png"
       type="image/x-icon"
     />
+    <link rel="manifest" href="../manifest.json" />
     <title>leticket</title>
+    <script>
+      window.addEventListener("load", () => {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("../sw.js");
+        }
+      });
+    </script>
   </head>
   <body>
     <!-- ------------------------------- header -------------------------------- -->
     <header>
-      <div class="div-time">
-        <span id="time"></span>
-      </div>
-      <div class="div-battery">
-        <img src="../images/battery.png" alt="" class="battery" />
-      </div>
       <h2 id="title"></h2>
       <div class="hidden" id="back">
         <img src="../images/white-arrow.png" alt="" />
@@ -27,8 +29,6 @@
       </div>
       <img id="arrow" class="hidden" src="../images/black-arrow.png" alt="" />
     </header>
-
-    <!-- -------------------------------- main --------------------------------- -->
     <main>
       <!-- ------------------------------- page 1 -------------------------------- -->
       <div id="mesTitresDiv" class="hidden">
@@ -90,14 +90,16 @@
       <div id="bancaireDiv" class="hidden">
         <span class="montant"> </span>
         <form>
-          <label for="numero">Numéro de la carte : <span id="numeroSpan"></span></label>
+          <label for="numero"
+            >Numéro de la carte : <span id="numeroSpan"></span
+          ></label>
           <div class="numero-div">
-            <input type="text" name="numero" id="numero" class="numero"/>
+            <input type="number" name="numero" id="numero" class="numero" />
             <img src="../images/interrogation-mark.png" alt="" />
           </div>
           <label for="expire">Expire fin : <span id="expireSpan"></span></label>
           <div class="expire">
-            <input type="text" placeholder="mois" name="expire" id="expire" />
+            <input type="number" placeholder="mois" name="expire" id="expire" />
             <input
               type="number"
               placeholder="année"
@@ -105,9 +107,11 @@
               id="expireYear"
             />
           </div>
-          <label for="cypto">Cryptogramme visuel : <span id="cryptoSpan"></span></label>
+          <label for="cypto"
+            >Cryptogramme visuel : <span id="cryptoSpan"></span
+          ></label>
           <div class="crypto">
-            <input type="text" name="crypto" id="crypto" />
+            <input type="number" name="crypto" id="crypto" />
             <img src="../images/interrogation-mark.png" alt="" />
           </div>
         </form>

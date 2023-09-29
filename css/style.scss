@@ -10,39 +10,29 @@
 .block {
   display: block;
 }
+main {
+  position: relative;
+}
 .m-0 {
   margin: 0;
 }
 
 /* ---------------------------------- Intro --------------------------------- */
-.div-time {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-  padding: 5px;
-  color: whitesmoke;
-  background-color: #32c759;
-  border-radius: 20px;
-  font-size: 20px;
-}
 .div-logo {
-  position: relative;
   width: 250px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   .logo {
     display: block;
-    width: 250px;
+    width: 100%;
     margin: auto 0;
   }
-}
-.aix-marseille {
-  width: 250px;
-  position: absolute;
-  bottom: 10px;
-  margin: 0 auto;
+  .aix-marseille {
+    display: block;
+    width: 100%;
+  }
 }
 
 /* ----------------------------------- App ---------------------------------- */
@@ -77,16 +67,6 @@ header {
     width: 20px;
   }
 }
-.div-battery {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-  height: 20px;
-  .battery {
-    height: 30px;
-  }
-}
 footer {
   background-color: whitesmoke;
   border-top: solid grey 1px;
@@ -110,8 +90,6 @@ nav {
     }
   }
 }
-
-/* -------------------------------- nav page -------------------------------- */
 
 /* ---------------------------------- page 1 --------------------------------- */
 .mesTitres-div {
@@ -457,7 +435,7 @@ nav {
   align-items: center;
 }
 
-// images abncaires
+// images bancaires
 .imgs1 {
   display: flex;
   justify-content: center;
